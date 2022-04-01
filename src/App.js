@@ -10,10 +10,11 @@ const App = () => {
 
     const [places, setPlaces] = useState([]);
 
-    const [coordinates, setCoordinates] = useState({});
+    const [coordinates, setCoordinates] = useState({ lat: 0, lng:0 });
     const [bounds, setBounds] = useState(null);
 
     useEffect(() =>{
+        console.log(coordinates, bounds);
         getPlacesData()
                 .then((data) => {
                     console.log(data);
